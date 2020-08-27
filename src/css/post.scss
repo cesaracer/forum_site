@@ -1,0 +1,42 @@
+.post-container{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.post-preview{
+    width: 100%;
+    overflow: hidden;
+    border: solid 1px grey;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    .post-preview-title{
+        width: 100%;
+        background-color: black;
+        color: white;
+        font-size: 25px;
+        padding: 10px;
+    }
+    .post-preview-author{
+        width: 100%;
+        color: gray;
+        padding: 10px;
+    }
+}
+
+.post-form{
+    width: 48%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border: solid 1px black;
+    border-radius: 5px;
+    input{
+        margin-bottom: 10px;
+    }
+    textarea{
+        width: 80%;
+        height: 150px;
+    }
+}
