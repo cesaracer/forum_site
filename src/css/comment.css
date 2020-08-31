@@ -1,0 +1,25 @@
+.comment {
+  float: left;
+  width: 100%;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.comment-header {
+  width: 100%;
+  background-color: grey;
+  float: left;
+  padding: 2px;
+}
+
+.comment-options {
+  float: right;
+}
+
+.option {
+  border: none;
+  background-color: #6c0097;
+  color: white;
+  padding: 2px;
+}
+/*# sourceMappingURL=comment.css.map */

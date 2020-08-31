@@ -1,10 +1,32 @@
 .btn{
-    margin-top: 10px;
+    margin-top: 50px;
     border-radius: 5px;
     text-align: center;
-    width: 50px;
     background-color: black;
     color: white;
     padding: 5px;
     cursor: pointer;
+    border: none;
+}
+
+.form-btn{
+    @extend .btn;
+    margin-top: 5px;
+    width: 20%;
+    float: left;
+}
+
+.btn-edit{
+    @extend .btn;
+    margin: 5px;
+    width: 15%;
+    float: left;
+}
+
+.btn-del{
+    @extend .btn;
+    background-color: red;
+    margin: 5px;
+    width: 15%;
+    float: left;
 }

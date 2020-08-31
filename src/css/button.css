@@ -1,11 +1,30 @@
-.btn {
-  margin-top: 10px;
+.btn, .form-btn, .btn-edit, .btn-del {
+  margin-top: 50px;
   border-radius: 5px;
   text-align: center;
-  width: 50px;
   background-color: black;
   color: white;
   padding: 5px;
   cursor: pointer;
+  border: none;
+}
+
+.form-btn {
+  margin-top: 5px;
+  width: 20%;
+  float: left;
+}
+
+.btn-edit {
+  margin: 5px;
+  width: 15%;
+  float: left;
+}
+
+.btn-del {
+  background-color: red;
+  margin: 5px;
+  width: 15%;
+  float: left;
 }
 /*# sourceMappingURL=button.css.map */

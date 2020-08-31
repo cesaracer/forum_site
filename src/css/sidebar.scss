@@ -1,0 +1,49 @@
+.sidebar{
+    overflow: hidden;
+    height: 100%;
+    position: fixed;
+    left: 0%;
+    top: 0%;
+}
+
+.sidebar-vert{
+    background-color: black;
+    width: 60px;
+    height: 100%;
+    float: right;
+    position: relative;
+    cursor: pointer;
+}
+
+.sidebar-content{
+    overflow: hidden;
+    height: 100%;
+    background-color: rgb(108, 0, 151);
+    float: right;
+    position: relative;
+    transition: 1s;
+    .btn{
+        width: 70%;
+        margin-left: 15%;
+    }
+    .btn-del{
+        width: 70%;
+        margin-left: 15%;
+    }
+}
+
+.logout{
+    bottom: 0px;
+    color: white;
+}
+
+.profile-username{
+    width: 80%;
+    margin-left: 10%;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: block;
+    background-color: white;
+    font-size: x-large;
+}

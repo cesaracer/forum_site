@@ -1,11 +1,8 @@
 .login {
-  width: 30%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 80%;
+  position: absolute;
   overflow: hidden;
-  border-bottom: solid 3px black;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  margin-left: 10%;
 }
 
 .login .login-header {
@@ -17,18 +14,27 @@
   border-top-right-radius: 10px;
 }
 
-.login .login-body {
+.login-body {
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 90%;
   padding: 15px;
 }
 
-.login .login-body input {
+.login-body input {
+  background-color: transparent;
   border: none;
-  border-bottom: solid 1px black;
+  border-bottom: solid 1px white;
   width: 100%;
   height: 30px;
+  color: white;
+  font-size: medium;
+}
+
+.login-body h5 {
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .post-container {
@@ -60,10 +66,211 @@
   padding: 10px;
 }
 
+.btn, .form-btn, .btn-edit, .btn-del, .option {
+  margin-top: 50px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.form-btn {
+  margin-top: 5px;
+  width: 20%;
+  float: left;
+}
+
+.btn-edit {
+  margin: 5px;
+  width: 15%;
+  float: left;
+}
+
+.btn-del {
+  background-color: red;
+  margin: 5px;
+  width: 15%;
+  float: left;
+}
+
+.sidebar {
+  overflow: hidden;
+  height: 100%;
+  position: fixed;
+  left: 0%;
+  top: 0%;
+}
+
+.sidebar-vert {
+  background-color: black;
+  width: 60px;
+  height: 100%;
+  float: right;
+  position: relative;
+  cursor: pointer;
+}
+
+.sidebar-content {
+  overflow: hidden;
+  height: 100%;
+  background-color: #6c0097;
+  float: right;
+  position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.sidebar-content .btn, .sidebar-content .form-btn, .sidebar-content .btn-edit, .sidebar-content .btn-del, .sidebar-content .option {
+  width: 70%;
+  margin-left: 15%;
+}
+
+.sidebar-content .btn-del {
+  width: 70%;
+  margin-left: 15%;
+}
+
+.logout {
+  bottom: 0px;
+  color: white;
+}
+
+.profile-username {
+  width: 80%;
+  margin-left: 10%;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: block;
+  background-color: white;
+  font-size: x-large;
+}
+
+.modal {
+  position: fixed;
+  width: 60%;
+  z-index: 10;
+  background-color: lightgray;
+  height: 90%;
+  bottom: 5%;
+  left: 20%;
+  border-radius: 5px;
+}
+
+.modal .modal-header {
+  color: white;
+  width: 100%;
+  height: 80px;
+  background-color: black;
+  float: left;
+  font-size: 35px;
+}
+
+.modal .modal-header .modal-header-title {
+  height: 80px;
+  float: left;
+  width: 70%;
+}
+
+.modal .modal-header .modal-header-title h1 {
+  margin-top: 5px;
+  margin-left: 15px;
+}
+
+.modal .modal-header .btn-edit {
+  margin-top: 15px;
+  float: left;
+  background-color: #6c0097;
+  border: none;
+  padding: 0px;
+}
+
+.modal .modal-header .btn-edit h1 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.modal .modal-body {
+  float: left;
+  color: black;
+  width: 100%;
+  background-color: white;
+}
+
+.modal .modal-body p {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.modal .modal-comments {
+  float: left;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.modal .modal-content {
+  float: left;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 25px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.btn, .form-btn, .btn-edit, .btn-del, .option {
+  margin-top: 50px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.form-btn {
+  margin-top: 5px;
+  width: 20%;
+  float: left;
+}
+
+.btn-edit {
+  margin: 5px;
+  width: 15%;
+  float: left;
+}
+
+.btn-del {
+  background-color: red;
+  margin: 5px;
+  width: 15%;
+  float: left;
+}
+
+.comment-form {
+  float: left;
+  margin-top: 20px;
+  width: 90%;
+  margin-left: 5%;
+  margin-bottom: 50px;
+}
+
+.comment-form-input {
+  width: 100%;
+}
+
+.comment-form-input textarea {
+  width: 100%;
+}
+
 .post-form {
   width: 48%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 50px;
   padding: 20px;
   border: solid 1px black;
   border-radius: 5px;
@@ -78,14 +285,97 @@
   height: 150px;
 }
 
-.btn {
-  margin-top: 10px;
-  border-radius: 5px;
+.comment-edit-form {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+}
+
+.comment-edit-form textarea {
+  width: 95%;
+  margin-left: 5px;
+}
+
+.form-edit-post {
+  float: left;
+  width: 100%;
+}
+
+.form-edit-post textarea {
+  width: 100%;
+  float: left;
+}
+
+.comment {
+  float: left;
+  width: 100%;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.comment-header {
+  width: 100%;
+  background-color: grey;
+  float: left;
+}
+
+.comment-header p {
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.comment-header-author {
+  width: 80%;
+  float: left;
+}
+
+.comment-options {
+  float: right;
+}
+
+.comment-body p {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.option {
+  background-color: #6c0097;
+  float: right;
+  margin-top: 4px;
+  margin-right: 4px;
+}
+
+.option h6 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.warning {
+  color: red;
+}
+
+.exit {
+  font-size: medium;
+  float: right;
+  display: block;
+  height: 20px;
+  width: 20px;
+  background-color: red;
   text-align: center;
-  width: 50px;
-  background-color: black;
-  color: white;
-  padding: 5px;
   cursor: pointer;
+}
+
+.header {
+  width: 100%;
+}
+
+.header h1 {
+  font-size: 50px;
+  text-align: center;
 }
 /*# sourceMappingURL=index.css.map */

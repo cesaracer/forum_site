@@ -1,0 +1,44 @@
+.comment{
+    float: left;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.comment-header{
+    width: 100%;
+    background-color: grey;
+    float: left;
+    p{
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+}
+
+.comment-header-author{
+    width: 80%;
+    float: left;
+}
+
+.comment-options{
+    float: right;
+}
+
+.comment-body{
+    p{
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+}
+
+.option{
+    @extend .btn;
+    background-color: rgb(108, 0, 151);
+    float: right;
+    margin-top: 4px;
+    margin-right: 4px;
+    h6{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+}

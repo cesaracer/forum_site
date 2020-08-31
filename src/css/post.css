@@ -26,22 +26,4 @@
   color: gray;
   padding: 10px;
 }
-
-.post-form {
-  width: 48%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px;
-  border: solid 1px black;
-  border-radius: 5px;
-}
-
-.post-form input {
-  margin-bottom: 10px;
-}
-
-.post-form textarea {
-  width: 80%;
-  height: 150px;
-}
 /*# sourceMappingURL=post.css.map */
