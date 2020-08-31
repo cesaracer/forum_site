@@ -13,15 +13,16 @@ function Login(props){
         baseURL: '/users'
     })
 
-    const loginUser = async () => {
-        console.log('sent')
-        let res = await api.post('/login', {email: email, password: password})
-        console.log('received')
-        let me = JSON.parse(res.request.response)
-        console.log(me.username)
-        props.login()
-        props.setUser(me)
-        
+    const loginUser = () => {
+        api.post('/login', {email: email, password: password})
+        .then(res => {
+            let me = JSON.parse(res.request.response)
+            props.login()
+            props.setUser(me)
+        })
+        .catch(err => {
+            alert('User not found')
+        })
     }
 
     const signUp = async () => {
@@ -40,7 +41,6 @@ function Login(props){
                 }
                 <div><input tabIndex='0' type='email' placeholder='Email' name='email' onChange={e => setEmail(e.target.value)}/></div>
                 <div><input tabIndex='0' type='password' placeholder='Password' name='password' onChange={e => setPassword(e.target.value)}/></div>
-                
                 {
                     checked ?
                     <div>
@@ -54,7 +54,6 @@ function Login(props){
                         <button tabIndex='0' className='btn' onClick={loginUser}>Login</button>
                     </div>
                 }
-                
             </div>
         </div>
     )

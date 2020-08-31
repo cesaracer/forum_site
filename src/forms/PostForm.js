@@ -13,7 +13,7 @@ function Create(props){
 
     const createPost = async () => {
         if(!props.isLoggedIn){
-            setWarning('Login to make a post')
+            setWarning('*Login to make a post*')
             setContent('')
             setPostTitle('')
         }
@@ -26,7 +26,7 @@ function Create(props){
                 setWarning('')
             }
             else{
-                setWarning('Please fill out all fields')
+                setWarning('*Please fill out all fields*')
             }
         }
     }

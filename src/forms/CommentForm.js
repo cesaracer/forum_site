@@ -12,10 +12,10 @@ function CommentForm(props){
     })
     const handleAdd = async () => {
         if(!props.status){
-            setWarning('Login to post a comment')
+            setWarning('*Login to post a comment*')
         }else{
             if(comment === ''){
-                setWarning('You cannot leave a blank comment')
+                setWarning('*You cannot leave a blank comment*')
             }
             else{
                 await api.post('/add', {postId: props.post.id, userId: props.user.userId, author: props.user.username, content: comment})
