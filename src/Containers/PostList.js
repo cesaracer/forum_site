@@ -1,15 +1,13 @@
 import React, { useEffect } from 'react';
 import Post from '../Components/Post';
 import { connect } from 'react-redux';
-import {setPosts} from '../actions/actions'
+import {fetchPosts} from '../actions/actions'
 
 function PostList(props){
 
     useEffect(() => {
-        fetch('/posts/all')
-        .then(res => res.json())
-        .then(data => props.setPosts(data))
-    })
+        props.loadPosts()
+    },[])
 
     return(
         <div className='post-container'>
@@ -28,7 +26,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return{
-        setPosts: (posts) => dispatch(setPosts(posts))
+        loadPosts: () => dispatch(fetchPosts())
     }
 }
 
