@@ -9,7 +9,7 @@ function SideBar(props){
     const [displayVal, setDisplayVal] = useState('none')
 
     const delAcc = async () => {
-        await Axios.delete(`/users/delete/${props.user.userId}`)
+        await Axios.delete(`https://us-central1-forum-app-33ac9.cloudfunctions.net/api/users/delete/${props.user.userId}`)
         alert('Your account has been deleted')
         props.logout()
     }

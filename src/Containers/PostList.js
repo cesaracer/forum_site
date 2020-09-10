@@ -1,18 +1,13 @@
 import React, { useEffect } from 'react';
 import Post from '../Components/Post';
 import { connect } from 'react-redux';
-import {fetchPosts} from '../actions/actions'
+import { fetchPosts } from '../actions/actions';
 
 function PostList(props){
-
-    useEffect(() => {
-        props.loadPosts()
-    },[])
-
     return(
         <div className='post-container'>
             {
-                props.posts.map(p => <Post key={p._id} {...p} />)
+                props.posts.map(p => <Post {...p}/>)
             }
         </div>
     )
@@ -26,8 +21,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return{
-        loadPosts: () => dispatch(fetchPosts())
+        fetchPosts: () => dispatch(fetchPosts())
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(PostList)
+export default connect(mapStateToProps)(PostList)

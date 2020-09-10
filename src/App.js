@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PostList from './Containers/PostList'
 import {connect} from 'react-redux'
 import Sidebar from './Components/SideBar'
 import Modal from './Components/Modal';
 import PostForm from './forms/PostForm';
 import Header from './Components/Header'
+import Axios from 'axios'
+import { setPosts, fetchPosts } from './actions/actions';
 
 function App(props) {
+  useEffect(() => {
+    props.fetch()
+  },[])
+
   return (
     <div className="App">
       <Header/>
@@ -29,4 +35,11 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(App);
+const mapDispatchToProps = (dispatch) => {
+  return{
+    fetch: () => dispatch(fetchPosts()),
+    setPosts: posts => dispatch(setPosts(posts))
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
