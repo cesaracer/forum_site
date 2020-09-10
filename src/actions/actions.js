@@ -62,20 +62,18 @@ export const setComment = comment => {
 
 export const fetchPosts = () => {
     return (dispatch) => {
-        Axios.get('/posts/all')
+        Axios.get('https://us-central1-forum-app-33ac9.cloudfunctions.net/api/posts/all')
         .then(res => {
-            const posts = res.data
-            dispatch(setPosts(posts))
+            dispatch(setPosts(res.data))
         })
     }
 }
 
 export const fetchComments = (id) => {
     return(dispatch) => {
-        Axios.get(`/comments/all/${id}`)
+        Axios.get(`https://us-central1-forum-app-33ac9.cloudfunctions.net/api/comments/all/${id}`)
         .then(res => {
-            const comments = res.data
-            dispatch(setComments(comments))
+            dispatch(setComments(res.data))
         })
     }
 }
