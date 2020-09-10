@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Axios from 'axios'
 
 function UserEdit(props){
 
     const api = Axios.create({
-        baseURL: '/users'
+        baseURL: 'https://us-central1-forum-app-33ac9.cloudfunctions.net/api/users'
     })
 
     const deleteUser = () => {

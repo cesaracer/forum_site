@@ -8,7 +8,7 @@ function PostEdit(props){
     const [content, setContent] = useState('')
 
     const api = Axios.create({
-        baseURL: '/posts'
+        baseURL: 'https://us-central1-forum-app-33ac9.cloudfunctions.net/api/posts'
     })
 
     const updatePost = async () => {

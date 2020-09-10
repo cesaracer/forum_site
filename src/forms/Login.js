@@ -10,7 +10,7 @@ function Login(props){
     const [password, setPassword] = useState('')
 
     const api = Axios.create({
-        baseURL: '/users'
+        baseURL: ' https://us-central1-forum-app-33ac9.cloudfunctions.net/api/users'
     })
 
     const loginUser = () => {
@@ -19,9 +19,6 @@ function Login(props){
             let me = JSON.parse(res.request.response)
             props.login()
             props.setUser(me)
-        })
-        .catch(err => {
-            alert('User not found')
         })
     }
 

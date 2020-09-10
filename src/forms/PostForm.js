@@ -1,16 +1,12 @@
 import React, { useState } from 'react'
 import Axios from 'axios';
 import {connect} from 'react-redux'
-import { fetchPosts } from '../actions/actions';
+import { setPosts, fetchPosts } from '../actions/actions';
 
 function Create(props){
     const [postTitle, setPostTitle] = useState('')
     const [postContent, setContent] = useState('')
     const [warning, setWarning] = useState('')
-    const api = Axios.create({
-        baseURL: '/posts'
-    })
-
     const createPost = async () => {
         if(!props.isLoggedIn){
             setWarning('*Login to make a post*')
@@ -19,8 +15,12 @@ function Create(props){
         }
         else{
             if(!(postContent === '' || postTitle === '')){
-                await api.post('/add', {title: postTitle, author: props.user.username, userId: props.user.userId, content: postContent})
-                props.loadPosts()
+                Axios.post('https://us-central1-forum-app-33ac9.cloudfunctions.net/api/posts/add', {title: postTitle, author: props.user.username, userId: props.user.userId, content: postContent})
+                props.fetch()
+                .then(res => {
+                props.setPosts(res.data)
+                })
+
                 setContent('')
                 setPostTitle('')
                 setWarning('')
@@ -56,7 +56,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return{
-        loadPosts: () => dispatch(fetchPosts())
+        fetch: () => dispatch(fetchPosts()),
+        setPosts: posts => dispatch(setPosts(posts))
     }
 }
 

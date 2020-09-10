@@ -8,7 +8,7 @@ function CommentForm(props){
     const [warning, setWarning] = useState('')
 
     const api = Axios.create({
-        baseURL: '/comments'
+        baseURL: 'https://us-central1-forum-app-33ac9.cloudfunctions.net/api/comments'
     })
     const handleAdd = async () => {
         if(!props.status){

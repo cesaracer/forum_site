@@ -7,7 +7,7 @@ function CommentEdit(props){
     const [comment, setComment] = useState('')
 
     const api = Axios.create({
-        baseURL: '/comments'
+        baseURL: 'https://us-central1-forum-app-33ac9.cloudfunctions.net/api/comments'
     })
 
     const updateComment = async () => {
