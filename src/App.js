@@ -5,7 +5,6 @@ import Sidebar from './Components/SideBar'
 import Modal from './Components/Modal';
 import PostForm from './forms/PostForm';
 import Header from './Components/Header'
-import Axios from 'axios'
 import { setPosts, fetchPosts } from './actions/actions';
 
 function App(props) {
@@ -15,6 +14,7 @@ function App(props) {
 
   return (
     <div className="App">
+      <Sidebar/>
       <Header/>
       {
         props.show ? 
@@ -22,7 +22,6 @@ function App(props) {
         :
         <div></div>
       }
-      <Sidebar/>
       <PostForm/>
       <PostList/>
     </div>
