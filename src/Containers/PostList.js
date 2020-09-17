@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Post from '../Components/Post';
 import { connect } from 'react-redux';
-import { fetchPosts } from '../actions/actions';
 
 function PostList(props){
     return(
@@ -16,12 +15,6 @@ function PostList(props){
 const mapStateToProps = (state) => {
     return{
         posts: state.posts
-    }
-}
-
-const mapDispatchToProps = (dispatch) => {
-    return{
-        fetchPosts: () => dispatch(fetchPosts())
     }
 }
 

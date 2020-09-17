@@ -26,10 +26,10 @@ function SideBar(props){
     
     return(
         <div className='sidebar'>
-            <div className='sidebar-vert' onClick={setDisplay}>
-                <img src='./images/profile.svg' alt='profile icon'/>
+            <div className='sidebar-horizontal' >
+                <img src='./images/profile.svg' onClick={setDisplay} alt='profile icon'/>
             </div>
-            <div className='sidebar-content' style={{width: displayVal}}>
+            <div className='sidebar-content' style={{height: displayVal}}>
                 {
                     props.status ?
                     <div className='profile'>
