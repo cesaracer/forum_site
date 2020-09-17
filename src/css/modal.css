@@ -2,18 +2,19 @@
   position: fixed;
   width: 60%;
   z-index: 10;
-  background-color: lightgray;
+  background-color: #ab72c2;
   height: 90%;
   bottom: 5%;
   left: 20%;
   border-radius: 5px;
+  border: solid black 2px;
 }
 
 .modal .modal-header {
   color: white;
   width: 100%;
   height: 80px;
-  background-color: black;
+  background-color: #6c0097;
   float: left;
   font-size: 35px;
 }
@@ -21,7 +22,7 @@
 .modal .modal-header .modal-header-title {
   height: 80px;
   float: left;
-  width: 70%;
+  width: 80%;
 }
 
 .modal .modal-header .modal-header-title h1 {

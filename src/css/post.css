@@ -1,21 +1,19 @@
 .post-container {
   width: 50%;
-  margin-left: auto;
-  margin-right: auto;
+  float: right;
 }
 
 .post-preview {
   width: 100%;
   overflow: hidden;
   border: solid 1px grey;
-  border-radius: 8px;
   margin-bottom: 20px;
   cursor: pointer;
 }
 
 .post-preview .post-preview-title {
   width: 100%;
-  background-color: black;
+  background-color: #6c0097;
   color: white;
   font-size: 25px;
   padding: 10px;

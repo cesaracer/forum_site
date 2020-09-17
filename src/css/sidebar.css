@@ -1,24 +1,30 @@
 .sidebar {
   overflow: hidden;
-  height: 100%;
-  position: fixed;
-  left: 0%;
+  width: 100%;
+  position: absolute;
   top: 0%;
+  left: 0%;
 }
 
-.sidebar-vert {
-  background-color: black;
-  width: 60px;
-  height: 100%;
-  float: right;
+.sidebar-horizontal {
+  opacity: 100%;
+  background-color: #6c0097;
+  width: 100%;
+  height: 50px;
   position: relative;
+}
+
+.sidebar-horizontal img {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 95%;
   cursor: pointer;
 }
 
 .sidebar-content {
   overflow: hidden;
-  height: 100%;
-  background-color: #6c0097;
+  width: 20%;
+  background-color: #a503e6;
   float: right;
   position: relative;
   -webkit-transition: 1s;
@@ -41,13 +47,13 @@
 }
 
 .profile-username {
-  width: 80%;
-  margin-left: 10%;
+  width: 100%;
   padding-left: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
   display: block;
-  background-color: white;
+  color: white;
+  background-color: #6c0097;
   font-size: x-large;
 }
 /*# sourceMappingURL=sidebar.css.map */

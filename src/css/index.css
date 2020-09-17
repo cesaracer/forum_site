@@ -39,22 +39,20 @@
 
 .post-container {
   width: 50%;
-  margin-left: auto;
-  margin-right: auto;
+  float: right;
 }
 
 .post-preview {
   width: 100%;
   overflow: hidden;
   border: solid 1px grey;
-  border-radius: 8px;
   margin-bottom: 20px;
   cursor: pointer;
 }
 
 .post-preview .post-preview-title {
   width: 100%;
-  background-color: black;
+  background-color: #6c0097;
   color: white;
   font-size: 25px;
   padding: 10px;
@@ -70,7 +68,7 @@
   margin-top: 50px;
   border-radius: 5px;
   text-align: center;
-  background-color: black;
+  background-color: #6c0097;
   color: white;
   padding: 5px;
   cursor: pointer;
@@ -98,25 +96,31 @@
 
 .sidebar {
   overflow: hidden;
-  height: 100%;
-  position: fixed;
-  left: 0%;
+  width: 100%;
+  position: absolute;
   top: 0%;
+  left: 0%;
 }
 
-.sidebar-vert {
-  background-color: black;
-  width: 60px;
-  height: 100%;
-  float: right;
+.sidebar-horizontal {
+  opacity: 100%;
+  background-color: #6c0097;
+  width: 100%;
+  height: 50px;
   position: relative;
+}
+
+.sidebar-horizontal img {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 95%;
   cursor: pointer;
 }
 
 .sidebar-content {
   overflow: hidden;
-  height: 100%;
-  background-color: #6c0097;
+  width: 20%;
+  background-color: #a503e6;
   float: right;
   position: relative;
   -webkit-transition: 1s;
@@ -139,13 +143,13 @@
 }
 
 .profile-username {
-  width: 80%;
-  margin-left: 10%;
+  width: 100%;
   padding-left: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
   display: block;
-  background-color: white;
+  color: white;
+  background-color: #6c0097;
   font-size: x-large;
 }
 
@@ -153,18 +157,19 @@
   position: fixed;
   width: 60%;
   z-index: 10;
-  background-color: lightgray;
+  background-color: #ab72c2;
   height: 90%;
   bottom: 5%;
   left: 20%;
   border-radius: 5px;
+  border: solid black 2px;
 }
 
 .modal .modal-header {
   color: white;
   width: 100%;
   height: 80px;
-  background-color: black;
+  background-color: #6c0097;
   float: left;
   font-size: 35px;
 }
@@ -172,7 +177,7 @@
 .modal .modal-header .modal-header-title {
   height: 80px;
   float: left;
-  width: 70%;
+  width: 80%;
 }
 
 .modal .modal-header .modal-header-title h1 {
@@ -224,7 +229,7 @@
   margin-top: 50px;
   border-radius: 5px;
   text-align: center;
-  background-color: black;
+  background-color: #6c0097;
   color: white;
   padding: 5px;
   cursor: pointer;
@@ -267,10 +272,10 @@
 }
 
 .post-form {
-  width: 48%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50px;
+  float: right;
+  width: 30%;
+  margin-left: 10%;
+  margin-right: 5%;
   padding: 20px;
   border: solid 1px black;
   border-radius: 5px;
@@ -316,8 +321,9 @@
 
 .comment-header {
   width: 100%;
-  background-color: grey;
+  background-color: #6c0097;
   float: left;
+  color: white;
 }
 
 .comment-header p {
@@ -371,6 +377,7 @@ body {
 }
 
 .header {
+  margin-top: 50px;
   width: 100%;
 }
 

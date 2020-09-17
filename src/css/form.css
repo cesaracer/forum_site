@@ -6,6 +6,7 @@
   color: white;
   padding: 5px;
   cursor: pointer;
+  border: none;
 }
 
 .form-btn {
@@ -44,10 +45,10 @@
 }
 
 .post-form {
-  width: 48%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50px;
+  float: right;
+  width: 30%;
+  margin-left: 10%;
+  margin-right: 5%;
   padding: 20px;
   border: solid 1px black;
   border-radius: 5px;
