@@ -15,12 +15,8 @@ function Create(props){
         }
         else{
             if(!(postContent === '' || postTitle === '')){
-                Axios.post('https://us-central1-forum-app-33ac9.cloudfunctions.net/api/posts/add', {title: postTitle, author: props.user.username, userId: props.user.userId, content: postContent})
-                props.fetch()
-                .then(res => {
-                props.setPosts(res.data)
-                })
-
+                await Axios.post('https://us-central1-forum-app-33ac9.cloudfunctions.net/api/posts/add', {title: postTitle, author: props.user.username, userId: props.user.userId, content: postContent})
+                props.fetchPosts()
                 setContent('')
                 setPostTitle('')
                 setWarning('')
@@ -56,7 +52,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return{
-        fetch: () => dispatch(fetchPosts()),
+        fetchPosts: () => dispatch(fetchPosts()),
         setPosts: posts => dispatch(setPosts(posts))
     }
 }
