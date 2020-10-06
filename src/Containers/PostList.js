@@ -2,6 +2,7 @@ import React from 'react';
 import Post from '../Components/Post';
 import { connect } from 'react-redux';
 
+//container for posts
 function PostList(props){
     return(
         <div className='post-container'>
