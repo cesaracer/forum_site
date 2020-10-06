@@ -3,13 +3,16 @@ import Axios from 'axios';
 import {connect} from 'react-redux'
 import { setPosts, fetchPosts } from '../actions/actions';
 
+//renders form to create post
 function Create(props){
     const [postTitle, setPostTitle] = useState('')
     const [postContent, setContent] = useState('')
     const [warning, setWarning] = useState('')
+
     const createPost = async () => {
         if(!props.isLoggedIn){
             setWarning('*Login to make a post*')
+            //reseting fields
             setContent('')
             setPostTitle('')
         }
@@ -17,6 +20,7 @@ function Create(props){
             if(!(postContent === '' || postTitle === '')){
                 await Axios.post('https://us-central1-forum-app-33ac9.cloudfunctions.net/api/posts/add', {title: postTitle, author: props.user.username, userId: props.user.userId, content: postContent})
                 props.fetchPosts()
+                //reseting fields
                 setContent('')
                 setPostTitle('')
                 setWarning('')

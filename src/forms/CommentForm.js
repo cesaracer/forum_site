@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import { fetchComments } from '../actions/actions'
 import Axios from 'axios'
 
+//renders form so users can comment on a post
 function CommentForm(props){
     const [comment, setComment] = useState('')
     const [warning, setWarning] = useState('')
@@ -10,6 +11,7 @@ function CommentForm(props){
     const api = Axios.create({
         baseURL: 'https://us-central1-forum-app-33ac9.cloudfunctions.net/api/comments'
     })
+
     const handleAdd = async () => {
         if(!props.status){
             setWarning('*Login to post a comment*')
@@ -17,7 +19,10 @@ function CommentForm(props){
             if(comment === ''){
                 setWarning('*You cannot leave a blank comment*')
             }
+
             else{
+                //sending post request to write comment to the db
+                //comments are the retrieved to update the comment section
                 await api.post('/add', {postId: props.post.id, userId: props.user.userId, author: props.user.username, content: comment})
                 props.getComments(props.post.id)
                 setWarning('')

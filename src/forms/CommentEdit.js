@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import Axios from 'axios'
 import {fetchComments} from '../actions/actions'
 
+//renders form to allow users to edit their comments
 function CommentEdit(props){
     const [comment, setComment] = useState('')
 
@@ -10,12 +11,14 @@ function CommentEdit(props){
         baseURL: 'https://us-central1-forum-app-33ac9.cloudfunctions.net/api/comments'
     })
 
+    //sends new data to api to update comment
     const updateComment = async () => {
         await api.patch(`/edit/${props.comment.id}`, {content: comment})
         setComment('')
         props.loadComments(props.post.id)
     }
 
+    //sends delete request to api to remove comment permenantly
     const deleteComment = async () => {
         await api.delete(`/delete/${props.comment.id}`)
         props.loadComments(props.post.id)
