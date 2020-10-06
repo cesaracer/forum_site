@@ -4,16 +4,19 @@ import { login, logout } from '../actions/actions'
 import Login from '../forms/Login'
 import Axios from 'axios'
 
+//renders login/signup/user-info component
 function SideBar(props){
     const [toggle, setToggle] = useState(false)
     const [displayVal, setDisplayVal] = useState('none')
 
+    
     const delAcc = async () => {
         await Axios.delete(`https://us-central1-forum-app-33ac9.cloudfunctions.net/api/users/delete/${props.user.userId}`)
         alert('Your account has been deleted')
         props.logout()
     }
 
+    //controls size/visibility of the login/signup window
     const setDisplay = () => {
         setToggle(!toggle)
         if(toggle){
@@ -31,6 +34,7 @@ function SideBar(props){
             </div>
             <div className='sidebar-content' style={{height: displayVal}}>
                 {
+                    //renders user info/options based on user login status
                     props.status ?
                     <div className='profile'>
                         <div className='profile-username'>{props.user.username}</div>

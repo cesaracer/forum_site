@@ -7,6 +7,7 @@ function Comment(props){
     const [isVisible, setVisible] = useState(false)
     const toggleEdit = () => {
         setVisible(!isVisible)
+        //setting current comment to the state
         props.setComment({id: props._id, comment: props.content})
     }
 
@@ -17,10 +18,12 @@ function Comment(props){
                     <p>{props.author}</p>
                 </div>
                 {
+                    //component is rendered if the current user is the author of the comment
                     props.userId === props.user.userId ?
                     <div className='comment-options'>
                         <button className='option' onClick={toggleEdit}>
                         {
+                            //toggling edit button text
                             isVisible ?
                             <h6>Close</h6>
                             :
@@ -36,6 +39,7 @@ function Comment(props){
                 <p>{props.content}</p>
             </div>
             {
+                //toggling visibility of comment edit form 
                 isVisible ?
                 <CommentEdit/>
                 :

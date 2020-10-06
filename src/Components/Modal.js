@@ -5,6 +5,7 @@ import Comment from './Comment'
 import CommentForm from '../forms/CommentForm'
 import PostEdit from '../forms/PostEdit'
 
+//popup window when post is clicked
 function Modal(props){
     const [isEdit, setEdit] = useState(false)
     return(
@@ -14,9 +15,11 @@ function Modal(props){
                     <h1>{props.post.title}</h1>
                 </div>
                 {
+                    //if the current user is the author of the post, the component is rendered
                     props.post.userId === props.user.userId ?
                     <button className='btn-edit' onClick={() => setEdit(!isEdit)}>
                         {
+                            //toggling text of the edit button
                             isEdit ?
                             <h1>Close</h1>
                             :
@@ -30,6 +33,7 @@ function Modal(props){
             </div>
             <div className='modal-content'>
                 {
+                    //renders edit form or post body
                     isEdit ?
                     <PostEdit/>
                     :
@@ -38,6 +42,7 @@ function Modal(props){
                 <CommentForm/>
                 <div className='modal-comments'>
                     {
+                        //listing out comments made on the post
                         props.comments.map(c => <Comment {...c}/>)
                     }
                 </div>

@@ -2,6 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {setPost, activate, fetchComments} from '../actions/actions'
 
+//preview block that users can click on to see entire post
 function Post(props){
     const post = {
         author: props.author,
