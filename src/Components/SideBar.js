@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
 import { login, logout } from '../actions/actions'
 import Login from '../forms/Login'
@@ -6,10 +6,13 @@ import Axios from 'axios'
 
 //renders login/signup/user-info component
 function SideBar(props){
-    const [toggle, setToggle] = useState(false)
+    const [toggle, setToggle] = useState(true)
     const [displayVal, setDisplayVal] = useState('none')
 
-    
+    useEffect(() => {
+        setToggle(!toggle)
+    },[])
+
     const delAcc = async () => {
         await Axios.delete(`https://us-central1-forum-app-33ac9.cloudfunctions.net/api/users/delete/${props.user.userId}`)
         alert('Your account has been deleted')
