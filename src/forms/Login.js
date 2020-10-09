@@ -23,6 +23,9 @@ function Login(props){
             props.login()
             props.setUser(me)
         })
+        .catch(error => {
+            alert('User not found!')
+        })
     }
 
     const signUp = async () => {
