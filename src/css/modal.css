@@ -5,7 +5,7 @@
   background-color: #ab72c2;
   height: 90%;
   bottom: 5%;
-  left: 20%;
+  margin-left: 20%;
   border-radius: 5px;
   border: solid black 2px;
 }
@@ -16,7 +16,7 @@
   height: 80px;
   background-color: #6c0097;
   float: left;
-  font-size: 35px;
+  font-size: 30px;
 }
 
 .modal .modal-header .modal-header-title {
@@ -68,5 +68,28 @@
   margin-top: 25px;
   overflow-x: hidden;
   overflow-y: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .modal {
+    width: 90%;
+    margin-left: 5%;
+    overflow-y: scroll;
+  }
+  .modal .modal-header {
+    font-size: 18px;
+    margin: 0px;
+  }
+  .modal .modal-header .btn-edit {
+    position: absolute;
+    background-color: black;
+    right: 0;
+    top: 20px;
+  }
+  .modal .modal-header .btn-edit h1 {
+    padding: 3px;
+    margin: 0;
+    font-size: 12px;
+  }
 }
 /*# sourceMappingURL=modal.css.map */

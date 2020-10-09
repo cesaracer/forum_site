@@ -43,3 +43,18 @@
         margin-bottom: 0px;
     }
 }
+
+@media screen and(max-width: 768px){
+    .comment-header-author{
+        width: 75%;
+    }
+    .comment-options{
+        float: left;
+    }
+    .option{
+        margin-left: 0px;
+        width: 100%;
+        background-color: black;
+        float: left;
+    }
+}

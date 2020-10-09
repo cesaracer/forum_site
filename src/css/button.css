@@ -17,7 +17,6 @@
 
 .btn-edit {
   margin: 5px;
-  width: 15%;
   float: left;
 }
 
@@ -26,5 +25,15 @@
   margin: 5px;
   width: 15%;
   float: left;
+}
+
+@media screen and (max-width: 768px) {
+  .btn, .form-btn, .btn-edit, .btn-del {
+    margin: 10px;
+  }
+  .form-btn {
+    float: left;
+    width: auto;
+  }
 }
 /*# sourceMappingURL=button.css.map */

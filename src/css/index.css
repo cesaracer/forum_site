@@ -64,6 +64,15 @@
   padding: 10px;
 }
 
+@media screen and (max-width: 768px) {
+  .post-container {
+    margin-top: 50px;
+    width: 95%;
+    margin-left: 2.5%;
+    float: left;
+  }
+}
+
 .btn, .form-btn, .btn-edit, .btn-del, .option {
   margin-top: 50px;
   border-radius: 5px;
@@ -83,7 +92,6 @@
 
 .btn-edit {
   margin: 5px;
-  width: 15%;
   float: left;
 }
 
@@ -94,10 +102,20 @@
   float: left;
 }
 
+@media screen and (max-width: 768px) {
+  .btn, .form-btn, .btn-edit, .btn-del, .option {
+    margin: 10px;
+  }
+  .form-btn {
+    float: left;
+    width: auto;
+  }
+}
+
 .sidebar {
   overflow: hidden;
   width: 100%;
-  position: absolute;
+  position: relative;
   top: 0%;
   left: 0%;
 }
@@ -110,15 +128,14 @@
 }
 
 .sidebar-horizontal img {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 95%;
+  margin: 5px;
+  float: right;
   cursor: pointer;
 }
 
 .sidebar-content {
   overflow: hidden;
-  width: 20%;
+  width: 30%;
   background-color: #a503e6;
   float: right;
   position: relative;
@@ -152,6 +169,16 @@
   font-size: x-large;
 }
 
+@media screen and (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+  }
+  .sidebar-content {
+    float: left;
+    width: 100%;
+  }
+}
+
 .modal {
   position: fixed;
   width: 60%;
@@ -159,7 +186,7 @@
   background-color: #ab72c2;
   height: 90%;
   bottom: 5%;
-  left: 20%;
+  margin-left: 20%;
   border-radius: 5px;
   border: solid black 2px;
 }
@@ -170,7 +197,7 @@
   height: 80px;
   background-color: #6c0097;
   float: left;
-  font-size: 35px;
+  font-size: 30px;
 }
 
 .modal .modal-header .modal-header-title {
@@ -224,6 +251,29 @@
   overflow-y: auto;
 }
 
+@media screen and (max-width: 768px) {
+  .modal {
+    width: 90%;
+    margin-left: 5%;
+    overflow-y: scroll;
+  }
+  .modal .modal-header {
+    font-size: 18px;
+    margin: 0px;
+  }
+  .modal .modal-header .btn-edit {
+    position: absolute;
+    background-color: black;
+    right: 0;
+    top: 20px;
+  }
+  .modal .modal-header .btn-edit h1 {
+    padding: 3px;
+    margin: 0;
+    font-size: 12px;
+  }
+}
+
 .btn, .form-btn, .btn-edit, .btn-del, .option {
   margin-top: 50px;
   border-radius: 5px;
@@ -243,7 +293,6 @@
 
 .btn-edit {
   margin: 5px;
-  width: 15%;
   float: left;
 }
 
@@ -252,6 +301,16 @@
   margin: 5px;
   width: 15%;
   float: left;
+}
+
+@media screen and (max-width: 768px) {
+  .btn, .form-btn, .btn-edit, .btn-del, .option {
+    margin: 10px;
+  }
+  .form-btn {
+    float: left;
+    width: auto;
+  }
 }
 
 .comment-form {
@@ -311,6 +370,21 @@
   float: left;
 }
 
+@media screen and (max-width: 768px) {
+  .post-form {
+    width: 95%;
+    margin-left: 2.5%;
+    float: left;
+    padding: 0;
+  }
+  .post-form input {
+    margin: 10px;
+  }
+  .post-form textarea {
+    margin: 10px;
+  }
+}
+
 .comment {
   float: left;
   width: 100%;
@@ -356,7 +430,24 @@
   margin-bottom: 0px;
 }
 
+@media screen and (max-width: 768px) {
+  .comment-header-author {
+    width: 75%;
+  }
+  .comment-options {
+    float: left;
+  }
+  .option {
+    margin-left: 0px;
+    width: 100%;
+    background-color: black;
+    float: left;
+  }
+}
+
 body {
+  margin: 0;
+  padding: 0;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -366,10 +457,12 @@ body {
 
 .exit {
   font-size: medium;
-  float: right;
-  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
   height: 20px;
   width: 20px;
+  display: block;
   background-color: red;
   text-align: center;
   cursor: pointer;

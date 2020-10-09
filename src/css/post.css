@@ -24,4 +24,13 @@
   color: gray;
   padding: 10px;
 }
+
+@media screen and (max-width: 768px) {
+  .post-container {
+    margin-top: 50px;
+    width: 95%;
+    margin-left: 2.5%;
+    float: left;
+  }
+}
 /*# sourceMappingURL=post.css.map */

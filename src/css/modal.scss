@@ -5,7 +5,7 @@
     background-color: rgb(171, 114, 194);
     height: 90%;
     bottom: 5%;
-    left: 20%;
+    margin-left: 20%;
     border-radius: 5px;
     border: solid black 2px;
     .modal-header{
@@ -14,7 +14,7 @@
         height: 80px;
         background-color: rgb(108, 0, 151);
         float: left;
-        font-size: 35px;
+        font-size: 30px;
         .modal-header-title{
             height: 80px;
             float: left;
@@ -58,5 +58,29 @@
         margin-top: 25px;
         overflow-x: hidden;
         overflow-y: auto;
+    }
+}
+
+@media screen and(max-width: 768px){
+    .modal{
+        width: 90%;
+        margin-left: 5%;
+        overflow-y: scroll;
+        .modal-header{
+            font-size: 18px;
+            margin: 0px;
+            .btn-edit{
+                position: absolute;
+                background-color: black;
+                right: 0;
+                top: 20px;
+                h1{
+                    padding: 3px;
+                    margin: 0;
+                    font-size: 12px;
+                }
+            }
+        }
+        
     }
 }

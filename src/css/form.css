@@ -84,4 +84,19 @@
   width: 100%;
   float: left;
 }
+
+@media screen and (max-width: 768px) {
+  .post-form {
+    width: 95%;
+    margin-left: 2.5%;
+    float: left;
+    padding: 0;
+  }
+  .post-form input {
+    margin: 10px;
+  }
+  .post-form textarea {
+    margin: 10px;
+  }
+}
 /*# sourceMappingURL=form.css.map */
